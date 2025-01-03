@@ -4,8 +4,7 @@ resolver = "2"
 members = [
     "rsa-core",
     "rsa-keygen",
-    "rsa-crypto",
-    "rsa-cli"
+    "rsa-crypto"
 ]
 [workspace.dependencies]
 num-bigint = "0.4"

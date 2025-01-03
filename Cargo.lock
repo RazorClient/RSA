@@ -462,15 +462,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 
 [[package]]
-name = "rsa-cli"
-version = "0.1.0"
-dependencies = [
- "rsa-core",
- "rsa-encrypt",
- "rsa-keygen",
-]
-
-[[package]]
 name = "rsa-core"
 version = "0.1.0"
 dependencies = [
@@ -481,10 +472,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "rsa-encrypt"
+name = "rsa-crypto"
 version = "0.1.0"
 dependencies = [
+ "num-bigint",
+ "num-traits",
  "rsa-core",
+ "rsa-keygen",
 ]
 
 [[package]]
