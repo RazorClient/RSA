@@ -5,7 +5,7 @@ use num_traits::{One, Zero};
 // TODO: Explore Barrett reduction for repeated modulo operations.
 // TODO: Investigate SIMD-based optimizations for BigInt operations.
 
-/// (base^exp) % modulus
+/// (base^exp) % modulus for bigint 
 pub fn modular_exponentiation(base: &BigInt, exp: &BigInt, modulus: &BigInt) -> BigInt {
     let mut result = BigInt::one();
     let mut base = base % modulus;
@@ -41,7 +41,7 @@ pub fn modular_inverse(a: &BigInt, m: &BigInt) -> Option<BigInt> {
     }
 }
 
-/// Helper for extended GCD
+/// Helper for extended GCD;
 /// iterative for speed
 fn extended_gcd(a: &BigInt, b: &BigInt) -> (BigInt, BigInt, BigInt) {
     let mut old_r = a.clone();
