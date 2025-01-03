@@ -1,8 +1,10 @@
 [workspace]
+resolver = "2"
+
 members = [
     "rsa-core",
     "rsa-keygen",
-    "rsa-encrypt",
+    "rsa-crypto",
     "rsa-cli"
 ]
 [workspace.dependencies]
