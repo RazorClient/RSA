@@ -3,4 +3,13 @@ name = "rsa-core"
 version = "0.1.0"
 edition = "2021"
 
+[dependencies]
+num-bigint = { version = "0.4", features = ["rand"] }
+num-traits = "0.2"
+rand="0.8"
 
+[dev-dependencies]
+criterion = "0.4"
+
+[lib]
+doctest = false
