@@ -1,0 +1,11 @@
+[workspace]
+members = [
+    "rsa-core",
+    "rsa-keygen",
+    "rsa-encrypt",
+    "rsa-cli"
+]
+[workspace.dependencies]
+num-bigint = "0.4"
+num-traits = "0.2"
+rand = "0.8"

@@ -1,0 +1,9 @@
+[package]
+name = "rsa-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rsa-core = { path = "../rsa-core" }
+rsa-keygen = { path = "../rsa-keygen" }
+rsa-encrypt = { path = "../rsa-encrypt" }
