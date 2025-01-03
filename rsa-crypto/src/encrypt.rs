@@ -1,4 +1,6 @@
 use num_bigint::BigInt;
+use rsa_core::arithmetic::modular_exponentiation;
+use num_traits::Zero;
 
 /// Encrypt a message using RSA public key
 pub fn rsa_encrypt(message: &BigInt, public_key: &(BigInt, BigInt)) -> BigInt {

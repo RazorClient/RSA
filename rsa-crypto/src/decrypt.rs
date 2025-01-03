@@ -1,5 +1,6 @@
 use num_bigint::BigInt;
-
+use rsa_core::arithmetic::modular_exponentiation;
+use num_traits::Zero;
 /// Decrypt a ciphertext using RSA private key
 pub fn rsa_decrypt(ciphertext: &BigInt, private_key: &(BigInt, BigInt)) -> BigInt {
     let (d, n) = private_key;

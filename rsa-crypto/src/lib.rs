@@ -7,7 +7,8 @@ pub use decrypt::rsa_decrypt;
 #[cfg(test)]
 mod tests {
     use super::*;
-    use rsa_keygen::generate_rsa_keys;
+    use num_bigint::BigInt;
+    use rsa_keygen::keygen::generate_rsa_keys;
     use rsa_core::utils::{string_to_bigint, bigint_to_string};
 
     #[test]
@@ -21,9 +22,8 @@ mod tests {
         // Message to encrypt
         let message = "Hello, RSA!";
         let message_bigint = string_to_bigint(message);
-
         // Encrypt the message
-        let ciphertext = rsa_encrypt(&message_bigint, &public_key);
+        let ciphertext = rsa_encrypt(&message_bigint.unwrap(), &public_key);
 
         // Decrypt the ciphertext
         let decrypted_bigint = rsa_decrypt(&ciphertext, &private_key);
